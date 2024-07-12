@@ -62,7 +62,7 @@ else
 fi
 unset __conda_setup
 
-conda activate /workspace/[GITHUB CODESPACE NAME]/venv
+conda activate /workspaces/[GITHUB CODESPACE NAME]/venv
 ```
 
 3. reload shell configuration by using `source ~/.bashrc` in terminal

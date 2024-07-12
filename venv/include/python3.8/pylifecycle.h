@@ -1,3 +1,8 @@
+/* Copyright (c) 2018, 2021, Oracle and/or its affiliates.
+ * Copyright (C) 1996-2020 Python Software Foundation
+ *
+ * Licensed under the PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+ */
 
 /* Interfaces to configure, query, create & destroy the Python runtime */
 
@@ -52,7 +57,6 @@ int _Py_CheckPython3(void);
 #endif
 
 /* In their own files */
-PyAPI_FUNC(const char *) Anaconda_GetVersion(void);
 PyAPI_FUNC(const char *) Py_GetVersion(void);
 PyAPI_FUNC(const char *) Py_GetPlatform(void);
 PyAPI_FUNC(const char *) Py_GetCopyright(void);

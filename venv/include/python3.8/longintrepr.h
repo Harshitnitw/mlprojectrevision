@@ -1,3 +1,8 @@
+/* Copyright (c) 2018, 2021, Oracle and/or its affiliates.
+ * Copyright (C) 1996-2017 Python Software Foundation
+ *
+ * Licensed under the PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+ */
 #ifndef Py_LIMITED_API
 #ifndef Py_LONGINTREPR_H
 #define Py_LONGINTREPR_H
@@ -84,7 +89,8 @@ typedef long stwodigits; /* signed variant of twodigits */
 
 struct _longobject {
     PyObject_VAR_HEAD
-    digit ob_digit[1];
+    digit dummy;
+    digit ob_digit[];
 };
 
 PyAPI_FUNC(PyLongObject *) _PyLong_New(Py_ssize_t);

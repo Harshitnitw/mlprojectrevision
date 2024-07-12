@@ -1,3 +1,8 @@
+/* Copyright (c) 2018, 2022, Oracle and/or its affiliates.
+ * Copyright (C) 1996-2020 Python Software Foundation
+ *
+ * Licensed under the PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+ */
 /* Former class object interface -- now only bound methods are here  */
 
 /* Revealing some structures (not for general use) */
@@ -19,7 +24,7 @@ typedef struct {
 
 PyAPI_DATA(PyTypeObject) PyMethod_Type;
 
-#define PyMethod_Check(op) ((op)->ob_type == &PyMethod_Type)
+#define PyMethod_Check(op) (Py_TYPE(op) == &PyMethod_Type)
 
 PyAPI_FUNC(PyObject *) PyMethod_New(PyObject *, PyObject *);
 
@@ -42,7 +47,7 @@ typedef struct {
 
 PyAPI_DATA(PyTypeObject) PyInstanceMethod_Type;
 
-#define PyInstanceMethod_Check(op) ((op)->ob_type == &PyInstanceMethod_Type)
+#define PyInstanceMethod_Check(op) (Py_TYPE(op) == &PyInstanceMethod_Type)
 
 PyAPI_FUNC(PyObject *) PyInstanceMethod_New(PyObject *);
 PyAPI_FUNC(PyObject *) PyInstanceMethod_Function(PyObject *);

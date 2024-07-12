@@ -15,6 +15,23 @@ You can open the settings.json file with the Preferences: Open User Settings (JS
 
 ## ctrl + , -> setting opens: search editor font size, make 14 (increase 4 points) or ctrl + shift + p, editor font size, click setting button and make shortcut for increasing text size
 
+## if github repository not linked to codespace then in codespace terminal write:
+```
+git init
+git add README.md
+git commit -m "first commit"
+git status
+git branch -M main
+git remote add origin https://github.com/Harshitnitw/mlproject.git # change 'Harshitnitw/mlproject.git'
+git remote -v
+# set/change 'git global config' by the following code if not configured:
+git config --global user.name "John Doe"
+git config --global user.email "john@example.com"
+# if want to check the current email config then:
+git config --global user.email
+git push -u origin main
+```
+
 ## add .gitignore file in github.com before installing conda environment so that  venv doesn't get pushed upon git push
 
 ## create conda environment by using following commands in terminal:
@@ -49,3 +66,10 @@ conda activate /workspace/[GITHUB CODESPACE NAME]/venv
 ```
 
 3. reload shell configuration by using `source ~/.bashrc` in terminal
+
+## While using jupyter notebook (ipynb file) in codespace, select kernel -> install -> python environments -> venv enviroment (conda python 3.8.0 installed in this example), would install pypy kernel
+
+## Running cells with 'venv (Python 3.8.5)' requires the ipykernel package. Run the following command in terminal to install 'ipykernel' into the Python environment. 
+'conda install -p /workspaces/mlprojectrevision/venv ipykernel --update-deps --force-reinstall -y'
+
+## If jupiter notebook slow or buggy then open in google colab, download the completed  file and upload in codespace

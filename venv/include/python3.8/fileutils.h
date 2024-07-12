@@ -1,3 +1,8 @@
+/* Copyright (c) 2019, 2021, Oracle and/or its affiliates.
+ * Copyright (C) 1996-2020 Python Software Foundation
+ *
+ * Licensed under the PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+ */
 #ifndef Py_FILEUTILS_H
 #define Py_FILEUTILS_H
 #ifdef __cplusplus

@@ -1,3 +1,8 @@
+/* Copyright (c) 2020, 2021, Oracle and/or its affiliates.
+ * Copyright (C) 1996-2020 Python Software Foundation
+ *
+ * Licensed under the PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+ */
 #ifndef Py_CPYTHON_TUPLEOBJECT_H
 #  error "this header file must not be included directly"
 #endif
@@ -11,7 +16,8 @@ typedef struct {
     /* ob_item contains space for 'ob_size' elements.
        Items must normally not be NULL, except during construction when
        the tuple is not yet visible outside the function that builds it. */
-    PyObject *ob_item[1];
+    // Truffle change: PyObject *ob_item[1] doesn't work for us in Sulong
+    PyObject **ob_item;
 } PyTupleObject;
 
 PyAPI_FUNC(int) _PyTuple_Resize(PyObject **, Py_ssize_t);

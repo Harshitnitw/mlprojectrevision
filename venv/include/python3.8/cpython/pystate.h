@@ -1,3 +1,8 @@
+/* Copyright (c) 2020, 2021, Oracle and/or its affiliates.
+ * Copyright (C) 1996-2020 Python Software Foundation
+ *
+ * Licensed under the PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
+ */
 #ifndef Py_CPYTHON_PYSTATE_H
 #  error "this header file must not be included directly"
 #endif
@@ -55,6 +60,7 @@ struct _ts {
     struct _ts *next;
     PyInterpreterState *interp;
 
+    /* Borrowed reference to the current frame (it can be NULL) */
     struct _frame *frame;
     int recursion_depth;
     char overflowed; /* The stack has overflowed. Allow 50 more calls

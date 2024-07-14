@@ -63,6 +63,8 @@ fi
 unset __conda_setup
 
 conda activate /workspaces/[GITHUB CODESPACE NAME]/venv
+
+export PYTHONPATH="${PYTHONPATH}:$(pwd)"
 ```
 
 3. reload shell configuration by using `source ~/.bashrc` in terminal

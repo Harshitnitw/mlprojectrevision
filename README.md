@@ -39,7 +39,7 @@ git push -u origin main
 
 `conda init`
 
-(stop current codespace and reopen)
+write 'stop' in terminal to stop the shell, and then ctrl + shift + `(backtick) to restart, OR (stop current codespace and reopen)
 
 ## to make conda environment as default follow this solution given by chatgpt: 
 https://chatgpt.com/share/8fbe75ed-9480-48ac-a8cc-36ea8f5286d1

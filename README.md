@@ -103,3 +103,13 @@ newgrp docker
 
 docker
 ```
+
+# Docker image for azure registry
+
+```
+docker build -t testdockerharshit.azurecr.io/mltest:latest .
+
+docker login -u <ACR username> -p <ACR password> <ACR login server>
+
+docker push testdockerharshit.azurecr.io/mltest:latest
+```

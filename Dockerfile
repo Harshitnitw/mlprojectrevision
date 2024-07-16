@@ -6,5 +6,5 @@ RUN apt-get update -y && apt-get install -y awscli
 
 RUN pip install -r requirements.txt
 
-EXPOSE 5000
+EXPOSE 8080
 CMD ["python3","application.py"]

@@ -17,6 +17,7 @@ You can open the settings.json file with the Preferences: Open User Settings (JS
 
 ## if github repository not linked to codespace then in codespace terminal write:
 ```
+
 git init
 git add README.md
 git commit -m "first commit"
@@ -39,7 +40,7 @@ git push -u origin main
 
 `conda init`
 
-(stop current codespace and reopen)
+write 'stop' in terminal to stop the shell, and then ctrl + shift + `(backtick) to restart, OR (stop current codespace and reopen)
 
 ## to make conda environment as default follow this solution given by chatgpt: 
 https://chatgpt.com/share/8fbe75ed-9480-48ac-a8cc-36ea8f5286d1
@@ -75,3 +76,30 @@ export PYTHONPATH="${PYTHONPATH}:$(pwd)"
 'conda install -p /workspaces/mlprojectrevision/venv ipykernel --update-deps --force-reinstall -y'
 
 ## If jupiter notebook slow or buggy then open in google colab, download the completed  file and upload in codespace
+
+# Using docker
+`docker build -t Harshitkedia321/studentperformance-app:latest .`
+
+`docker images`
+
+`docker rmi -f (IMAGE ID)`
+
+`docker run -p 5000:5000 Harshitkedia321/studentperformance-app:latest` # 2nd 5000 is about the port exposed by dockerfile and the one used by app.py
+
+# For AWS EC2 instance, put following commands in terminal in ubuntu to use docker:
+
+```
+sudo apt-get update -y
+
+sudo apt-get upgrade
+
+curl -fsSL https://get.docker.com -o get-docker.sh
+
+sudo sh get-docker.sh
+
+sudo usermod -aG docker ubuntu
+
+newgrp docker
+
+docker
+```

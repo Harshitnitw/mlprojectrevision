@@ -17,6 +17,16 @@ You can open the settings.json file with the Preferences: Open User Settings (JS
 
 ## if github repository not linked to codespace then in codespace terminal write:
 ```
+
+# Using docker
+`docker build -t Harshitkedia321/studentperformance-app:latest .`
+
+`docker images`
+
+`docker rmi -f (IMAGE ID)`
+
+`docker run -p 5000:5000 Harshitkedia321/studentperformance-app:latest`
+# 2nd 5000 is about the port exposed by dockerfile and the one used by app.py
 git init
 git add README.md
 git commit -m "first commit"

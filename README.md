@@ -1,7 +1,10 @@
 # end to end ml project revision
 
 ## rename github codespace to avoid confusion later
-
+## add PAT token in codespace to be allowed to push code to other user's reposotory
+```
+git remote set-url origin https://<your-username>:<your-PAT>@github.com/<target-username>/<target-repo>.git
+```
 ## set backgroud dark by using the following:
 You can open the settings.json file with the Preferences: Open User Settings (JSON) command in the Command Palette (Ctrl+Shift+P).
 ```

@@ -16,6 +16,9 @@ You can open the settings.json file with the Preferences: Open User Settings (JS
 }
 ```
 
+## word wrap
+Click on 'File' on the top menu. · Click on 'Preferences' --> 'Settings'. · Scroll a little bit until you find 'Editor: Word Wrap'.
+
 ## ctrl + , -> setting opens: search editor font size, make 14 (increase 4 points) or ctrl + shift + p, editor font size, click setting button and make shortcut for increasing text size
 
 ## if github repository not linked to codespace then in codespace terminal write:

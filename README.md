@@ -11,7 +11,10 @@ You can open the settings.json file with the Preferences: Open User Settings (JS
 {
 	"workbench.colorCustomizations": {
         "editor.background": "#000000",
-        "activityBar.background": "#000000"
+        "activityBar.background": "#000000",
+	"scrollbarSlider.background": "#1E1E1E",
+    	"scrollbarSlider.hoverBackground": "#292929",
+    	"scrollbarSlider.activeBackground": "#353535"
 	}
 }
 ```

@@ -4,6 +4,8 @@
 ## open the repository in github.com and then select open it in codespace from there 
 ## add PAT token in codespace to be allowed to push code to other user's reposotory
 ```
+git init
+git remote add origin https://github.com/<target-username>/<target-repo>.git # change 'Harshitnitw/mlproject.git'
 git remote set-url origin https://<your-username>:<your-PAT>@github.com/<target-username>/<target-repo>.git
 ```
 ## set backgroud dark by using the following:
@@ -46,7 +48,7 @@ git push -u origin main
 ## add .gitignore file in github.com before installing conda environment so that  venv doesn't get pushed upon git push
 
 ## create conda environment by using following commands in terminal:
-`conda create -p venv python==3.8 -y`
+`conda create -p venv python==3.10 -y`
 
 `conda init`
 
@@ -73,11 +75,11 @@ else
 fi
 unset __conda_setup
 
-conda activate /workspaces/[GITHUB CODESPACE NAME]/venv
+conda activate /workspaces/codespaces-blank/venv
 
 export PYTHONPATH="${PYTHONPATH}:$(pwd)"
 ```
-
+#### *Replace "codespaces-blank" with repository name appearing in the terminal
 3. reload shell configuration by using `source ~/.bashrc` in terminal
 
 ## While using jupyter notebook (ipynb file) in codespace, select kernel -> install -> python environments -> venv enviroment (conda python 3.8.0 installed in this example), would install pypy kernel
